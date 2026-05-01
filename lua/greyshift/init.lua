@@ -12,7 +12,7 @@ end
 
 function M.load()
     local palette = require("greyshift.palette")
-    local highlights = require("greyshift.highlights").dark
+    local highlights = require("greyshift.highlights")
 
     if M.options.transparent_background then
         palette.bg0 = "NONE"
