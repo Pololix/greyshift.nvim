@@ -22,6 +22,19 @@ function M.setup(palette)
     hi("Folded", { fg = palette.fg1, bg = palette.bg1, italic = true })
     hi("MatchParen", { fg = palette.yellow, bold = true, underline = true })
 
+    -- Syntax
+    hi("Comment", { fg = palette.fg1, italic = true })
+    hi("Constant", { fg = palette.magenta })
+    hi("String", { fg = palette.green })
+    hi("Identifier", { fg = palette.fg0 })
+    hi("Function", { fg = palette.blue })
+    hi("Statement", { fg = palette.red })
+    hi("Keyword", { fg = palette.red, bold = true })
+    hi("Type", { fg = palette.yellow })
+    hi("Special", { fg = palette.cyan })
+    hi("Todo", { fg = palette.bg0, bg = palette.yellow, bold = true })
+    hi("Error", { fg = palette.red, bold = true })
+
     -- Treesitter
     hi("@variable", { fg = palette.fg0 })
     hi("@variable.builtin", { fg = palette.red })
