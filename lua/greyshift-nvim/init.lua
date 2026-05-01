@@ -11,8 +11,8 @@ function M.setup(opts)
 end
 
 function M.load()
-    local palette = require("greyshift.palette")
-    local highlights = require("greyshift.highlights").dark
+    local palette = require("greyshift-nvim.palette")
+    local highlights = require("greyshift-nvim.highlights").dark
 
     if M.options.transparent_background then
         palette.bg0 = "NONE"
