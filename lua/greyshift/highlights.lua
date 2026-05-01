@@ -17,7 +17,7 @@ function M.setup(palette)
         VertSplit    = { fg = palette.bg.light },
 
         Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
-        PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.blue.dark, bold = true },
+        PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.dark_blue , bold = true },
 
         SignColumn   = { fg = palette.fg.dimmed, bg = palette.none },
 
@@ -39,32 +39,32 @@ function M.setup(palette)
     M.syntax = {
         -- Treesitter
         ["@keyword"]      = { fg = palette.accent.purple, bold = true },
-        ["@type"]         = { fg = palette.accent.blue.dark },
+        ["@type"]         = { fg = palette.accent.dark_blue },
         ["@type.builtin"] = { fg = palette.accent.red },
-        ["@string"]       = { fg = palette.accent.green.dark },
+        ["@string"]       = { fg = palette.accent.dark_green },
         ["@function"]     = { fg = palette.accent.yellow },
-        ["@variable"]     = { fg = palette.accent.blue.light },
-        ["@parameter"]    = { fg = palette.accent.blue.light },
+        ["@variable"]     = { fg = palette.accent.light_blue },
+        ["@parameter"]    = { fg = palette.accent.light_blue },
         ["@comment"]      = { fg = palette.fg.dimmed, italic = true },
         ["@constant"]     = { fg = palette.accent.purple },
         ["@operator"]     = { fg = palette.fg.normal },
-        ["@property"]     = { fg = palette.accent.blue.light },
+        ["@property"]     = { fg = palette.accent.light_blue },
 
         -- Vim (fallback)
         Comment           = { fg = palette.fg.dimmed, italic = true },
-        String            = { fg = palette.accent.green.dark },
+        String            = { fg = palette.accent.dark_green },
         Function          = { fg = palette.accent.yellow },
-        Identifier        = { fg = palette.accent.blue.light },
+        Identifier        = { fg = palette.accent.light_blue },
         Keyword           = { fg = palette.accent.purple, bold = true },
-        Type              = { fg = palette.accent.blue.dark },
+        Type              = { fg = palette.accent.dark_blue },
         Constant          = { fg = palette.accent.purple },
     }
 
     M.diagnostics = {
         DiagnosticError            = { fg = palette.accent.red },
         DiagnosticWarn             = { fg = palette.accent.yellow },
-        DiagnosticInfo             = { fg = palette.accent.blue.dark },
-        DiagnosticHint             = { fg = palette.accent.blue.light },
+        DiagnosticInfo             = { fg = palette.accent.dark_blue },
+        DiagnosticHint             = { fg = palette.accent.light_blue },
 
         DiagnosticUnderlineError   = {
             undercurl = true,
@@ -81,12 +81,12 @@ function M.setup(palette)
     }
 
     M.git = {
-        DiffAdd        = { fg = palette.accent.green.dark },
+        DiffAdd        = { fg = palette.accent.dark_green },
         DiffDelete     = { fg = palette.accent.red },
         DiffChange     = { fg = palette.accent.yellow },
-        DiffText       = { fg = palette.accent.blue.dark },
+        DiffText       = { fg = palette.accent.dark_blue },
 
-        GitSignsAdd    = { fg = palette.accent.green.dark },
+        GitSignsAdd    = { fg = palette.accent.dark_green},
         GitSignsDelete = { fg = palette.accent.red },
         GitSignsChange = { fg = palette.accent.yellow },
     }
