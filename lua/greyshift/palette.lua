@@ -1,6 +1,4 @@
-local M = {}
-
-M.dark = {
+return {
     bg = {
         light = "#2a2a2a",
         medium = "#1c1c1c",
@@ -26,5 +24,3 @@ M.dark = {
 
     none = "NONE"
 }
-
-return M

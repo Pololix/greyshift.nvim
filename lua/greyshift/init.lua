@@ -11,7 +11,8 @@ function M.setup(opts)
 end
 
 function M.load()
-    require("greyshift.highlights").setup(require("greyshift.palette"))
+    local palette = require("greyshift.palette")
+    require("greyshift.highlights").setup(palette)
 end
 
 return M
