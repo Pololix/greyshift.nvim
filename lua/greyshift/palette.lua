@@ -1,4 +1,5 @@
 local M = {}
+
 M.dark = {
     bg0     = "#1e1e2e",
     bg1     = "#181825",
