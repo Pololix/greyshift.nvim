@@ -3,24 +3,19 @@ return {
         light  = "#363644",
         medium = "#2e2e3a",
         dark   = "#252530",
-
         accent = "#40404e",
     },
-
     fg     = {
-        normal = "#c8c8da",
-        dimmed = "#64647e",
+        normal = "#d0d0e8",
+        dimmed = "#72728a",
     },
-
     accent = {
-        grey   = "#6b6b82",
-
-        red    = "#b87070",
-        yellow = "#c4a55a",
-        green  = "#7aa87a",
-        purple = "#9882c0",
-        blue   = "#6295b8"
+        grey   = "#7c7c7c",
+        red    = "#cc7575",
+        yellow = "#d4aa48",
+        green  = "#82c082",
+        purple = "#a882d8",
+        blue   = "#58a8d8",
     },
-
     none   = "NONE"
 }
