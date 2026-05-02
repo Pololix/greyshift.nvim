@@ -1,8 +1,8 @@
 return {
     bg     = {
-        light  = "#252530",
+        light  = "#363644",
         medium = "#2e2e3a",
-        dark   = "#363644",
+        dark   = "#252530",
 
         accent = "#40404e",
     },
