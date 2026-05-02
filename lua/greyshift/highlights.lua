@@ -21,8 +21,8 @@ function M.setup(palette)
         Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
         PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.red, bold = true },
 
-        Folded     = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
-        MatchParen = { fg = palette.accent.yellow, bold = true },
+        Folded       = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
+        MatchParen   = { fg = palette.accent.yellow, bold = true },
     }
 
     M.syntax = {
@@ -38,13 +38,13 @@ function M.setup(palette)
 
         ["@function"]     = { fg = palette.accent.yellow },
         ["@variable"]     = { fg = palette.fg.normal },
-        ["@parameter"]    = { fg = palette.accent.blue },
-        ["@property"]     = { fg = palette.accent.blue },
+        ["@parameter"]    = { fg = palette.accent.red },
+        ["@property"]     = { fg = palette.accent.red },
 
         ["@constant"]     = { fg = palette.accent.purple },
 
-        ["@type"]         = { fg = palette.accent.blue },
-        ["@type.builtin"] = { fg = palette.accent.red },
+        ["@type"]         = { fg = palette.accent.red },
+        ["@type.builtin"] = { fg = palette.accent.blue },
     }
 
     M.diagnostics = {
@@ -77,7 +77,23 @@ function M.setup(palette)
     }
 
     M.plugins = {
+        -- Neotree
+        NeoTreeCursorLine    = { bg = palette.bg.medium },
+        NeoTreeNormal        = { fg = palette.fg.normal, bg = palette.bg.dark },
+        NeoTreeNormalNC      = { fg = palette.fg.dimmed, bg = palette.bg.dark },
+        NeoTreeIndentMarker  = { fg = palette.fg.dimmed },
+        NeoTreeExpander      = { fg = palette.fg.dimmed },
 
+        NeoTreeDirectoryName = { fg = palette.accent.yellow },
+        NeoTreeDirectoryIcon = { fg = palette.accent.yellow },
+        NeoTreeFileName      = { fg = palette.fg.normal },
+        NeoTreeFileIcon      = { fg = palette.fg.normal },
+        NeoTreeRootName      = { fg = palette.accent.red, bold = true },
+
+        NeoTreeGitAdded      = { fg = palette.accent.green },
+        NeoTreeGitDeleted    = { fg = palette.accent.red },
+        NeoTreeGitModified   = { fg = palette.accent.yellow },
+        NeoTreeGitUntracked  = { fg = palette.fg.dimmed },
     }
 
     local groups = { M.ui, M.syntax, M.diagnostics, M.git, M.plugins }
