@@ -6,16 +6,16 @@ return {
         accent = "#40404e",
     },
     fg     = {
-        normal = "#d0d0e8",
-        dimmed = "#72728a",
+        normal = "#d8d8f2",
+        dimmed = "#808095",
     },
     accent = {
-        grey   = "#7c7c7c",
-        red    = "#cc7575",
-        yellow = "#d4aa48",
-        green  = "#82c082",
-        purple = "#a882d8",
-        blue   = "#58a8d8",
+        grey   = "#909090",
+        red    = "#e07c7c",
+        yellow = "#e8b030",
+        green  = "#8ad48a",
+        purple = "#b885ee",
+        blue   = "#45b5ee",
     },
     none   = "NONE"
 }
