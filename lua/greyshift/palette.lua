@@ -1,26 +1,25 @@
 return {
     bg     = {
-        light  = "#4B5158",
-        medium = "#3B3F45",
-        dark   = "#313439",
+        light  = "#26262e",
+        medium = "#1c1c22",
+        dark   = "#141418",
 
-        accent = "#5E5A52",
+        accent = "#2f2f3a",
     },
 
     fg     = {
-        normal = "#D8D3C9",
-        dimmed = "#9A948B",
+        normal = "#cac9d8",
+        dimmed = "#5e5e72",
     },
 
     accent = {
-        white  = "#D8D3C9",
-        grey   = "#9A948B",
+        grey   = "#6b6b82",
 
-        red    = "#E07A6A",
-        yellow = "#E6C27A",
-        green  = "#9BBF8A",
-        purple = "#B48ECA",
-        blue   = "#6FA9D6"
+        red    = "#b87070",
+        yellow = "#c4a55a",
+        green  = "#7aa87a",
+        purple = "#9882c0",
+        blue   = "#6295b8"
     },
 
     none   = "NONE"
