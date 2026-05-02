@@ -31,6 +31,7 @@ function M.setup(palette)
 
         ["@keyword"]      = { fg = palette.accent.purple, bold = true },
         ["@operator"]     = { fg = palette.fg.normal },
+        ["@punctuation"]  = { fg = palette.fg.normal },
 
         ["@string"]       = { fg = palette.accent.green },
         ["@number"]       = { fg = palette.accent.yellow },
