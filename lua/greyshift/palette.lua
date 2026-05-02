@@ -1,26 +1,27 @@
 return {
-    bg = {
-        light = "#2a2a2a",
-        medium = "#1c1c1c",
-        dark = "#121212"
+    bg     = {
+        light  = "#80786f",
+        medium = "#676059",
+        dark   = "#4f4943",
+
+        accent = "#a08f63", -- todo: change
     },
 
-    fg = {
-        normal = "#e6e6e6",
-        dimmed = "#5a5e68"
+    fg     = {
+        normal = "#dad4cc",
+        dimmed = "#3f3933"
     },
 
     accent = {
-        red = "#ff3b30",
-        yellow = "#ffcc00",
-        light_green = "#4cd964",
-        dark_green = "#2e9d47",
-        light_blue = "#4da3ff",
-        dark_blue = "#007aff",
-        purple = "#af52de",
+        white  = "#dad4cc",
+        grey   = "#3f3933",
 
-        white = "#e6e6e6"
+        red    = "#d16d5b",
+        yellow = "#e0b85c",
+        green  = "#8fbf7a",
+        purple = "#a487c8",
+        blue   = "#6fafd2"
     },
 
-    none = "NONE"
+    none   = "NONE"
 }
