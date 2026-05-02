@@ -91,9 +91,9 @@ function M.setup(palette)
         NeoTreeFileIcon      = { fg = palette.fg.normal },
         NeoTreeRootName      = { fg = palette.accent.red, bold = true },
 
-        NeoTreeGitAdded      = { fg = palette.accent.green },
-        NeoTreeGitDeleted    = { fg = palette.accent.red },
-        NeoTreeGitModified   = { fg = palette.accent.yellow },
+        NeoTreeGitAdded      = { fg = palette.fg.normal },
+        NeoTreeGitDeleted    = { fg = palette.fg.normal },
+        NeoTreeGitModified   = { fg = palette.fg.normal },
         NeoTreeGitUntracked  = { fg = palette.fg.dimmed },
     }
 
