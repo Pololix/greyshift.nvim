@@ -1,10 +1,10 @@
 return {
     bg     = {
-        light  = "#80786f",
-        medium = "#676059",
-        dark   = "#4f4943",
+        light  = "#6a625a",
+        medium = "#514a44",
+        dark   = "#3f3934",
 
-        accent = "#a08f63", -- todo: change
+        accent = "#7d725d", -- todo: change
     },
 
     fg     = {
