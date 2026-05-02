@@ -1,15 +1,15 @@
 return {
     bg     = {
-        light  = "#26262e",
-        medium = "#1c1c22",
-        dark   = "#141418",
+        light  = "#252530",
+        medium = "#2e2e3a",
+        dark   = "#363644",
 
-        accent = "#2f2f3a",
+        accent = "#40404e",
     },
 
     fg     = {
-        normal = "#cac9d8",
-        dimmed = "#5e5e72",
+        normal = "#c8c8da",
+        dimmed = "#64647e",
     },
 
     accent = {
