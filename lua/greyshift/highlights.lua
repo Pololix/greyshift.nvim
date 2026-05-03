@@ -1,6 +1,6 @@
 local M = {}
 
-function M.setup(palette)
+function M.set(palette)
     M.ui = {
         Normal       = { fg = palette.fg.normal, bg = palette.bg.medium },
         NormalFloat  = { fg = palette.fg.normal, bg = palette.bg.dark },
