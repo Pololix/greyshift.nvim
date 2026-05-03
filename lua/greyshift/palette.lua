@@ -10,6 +10,7 @@ return {
         dimmed = "#808095",
     },
     accent = {
+        white  = "#d8d8f2",
         grey   = "#909090",
         red    = "#e07c7c",
         yellow = "#e8b030",
