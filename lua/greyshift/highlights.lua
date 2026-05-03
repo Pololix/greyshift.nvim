@@ -6,7 +6,7 @@ function M.set(palette)
         NormalFloat  = { fg = palette.fg.normal, bg = palette.bg.dark },
         FloatBorder  = { fg = palette.bg.light },
 
-        Special      = { fg = pàlette.fg.normal, bg = palette.bg.medium },
+        Special      = { fg = palette.fg.normal, bg = palette.bg.medium },
 
         CursorLine   = { bg = palette.bg.light },
         CursorLineNr = { fg = palette.accent.yellow, bold = true },
