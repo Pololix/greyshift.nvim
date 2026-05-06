@@ -3,10 +3,9 @@ local M = {}
 function M.set(palette)
     M.ui = {
         Normal       = { fg = palette.fg.normal, bg = palette.bg.medium },
+        Special      = { fg = palette.fg.normal },
         NormalFloat  = { fg = palette.fg.normal, bg = palette.bg.dark },
         FloatBorder  = { fg = palette.bg.accent },
-
-        Special      = { fg = palette.fg.normal },
 
         CursorLine   = { bg = palette.bg.light },
         CursorLineNr = { fg = palette.accent.yellow, bold = true },
@@ -26,7 +25,7 @@ function M.set(palette)
         PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.blue, bold = true },
 
         Folded       = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
-        FoldColumn   = { fg = palette.fg.dimmed, bg = palette.bg.dark },
+        FoldColumn   = { fg = palette.fg.dimmed, bg = palette.bg.medium },
 
         MatchParen   = { fg = palette.accent.yellow, bold = true },
     }
@@ -34,18 +33,18 @@ function M.set(palette)
     M.syntax = {
         ["@comment"]      = { fg = palette.fg.dimmed, italic = true },
 
-        ["@keyword"]      = { fg = palette.accent.purple, bold = true },
-        ["@operator"]     = { fg = palette.fg.normal },
-        ["@punctuation"]  = { fg = palette.fg.dimmed }, -- reduce noise
+        ["@keyword"]      = { fg = palette.accent.purple },
+        ["@function"]     = { fg = palette.accent.yellow },
 
         ["@string"]       = { fg = palette.accent.green },
         ["@number"]       = { fg = palette.accent.yellow },
         ["@boolean"]      = { fg = palette.accent.yellow },
 
-        ["@function"]     = { fg = palette.accent.yellow },
+        ["@operator"]     = { fg = palette.fg.normal },
+        ["@punctuation"]  = { fg = palette.fg.dimmed },
 
         ["@variable"]     = { fg = palette.fg.normal },
-        ["@parameter"]    = { fg = palette.accent.red }, -- only slightly emphasized
+        ["@parameter"]    = { fg = palette.accent.red },
         ["@property"]     = { fg = palette.fg.normal },
         ["@constant"]     = { fg = palette.accent.purple },
 
@@ -54,7 +53,7 @@ function M.set(palette)
     }
 
     M.diagnostics = {
-        DiagnosticError            = { fg = palette.accent.red, bold = true },
+        DiagnosticError            = { fg = palette.accent.red },
         DiagnosticWarn             = { fg = palette.accent.yellow },
         DiagnosticInfo             = { fg = palette.accent.blue },
         DiagnosticHint             = { fg = palette.fg.dimmed },
@@ -83,6 +82,7 @@ function M.set(palette)
     }
 
     M.plugins = {
+        -- Neotree
         NeoTreeCursorLine    = { bg = palette.bg.medium },
 
         NeoTreeNormal        = { fg = palette.fg.normal, bg = palette.bg.dark },
@@ -91,13 +91,13 @@ function M.set(palette)
         NeoTreeIndentMarker  = { fg = palette.fg.dimmed },
         NeoTreeExpander      = { fg = palette.fg.dimmed },
 
-        NeoTreeDirectoryName = { fg = palette.fg.normal, bold = true },
-        NeoTreeDirectoryIcon = { fg = palette.accent.blue },
+        NeoTreeDirectoryName = { fg = palette.accent.yellow },
+        NeoTreeDirectoryIcon = { fg = palette.accent.yellow },
 
         NeoTreeFileName      = { fg = palette.fg.normal },
         NeoTreeFileIcon      = { fg = palette.fg.dimmed },
 
-        NeoTreeRootName      = { fg = palette.accent.purple, bold = true },
+        NeoTreeRootName      = { fg = palette.accent.red, bold = true },
 
         NeoTreeGitAdded      = { fg = palette.accent.green },
         NeoTreeGitDeleted    = { fg = palette.accent.red },
