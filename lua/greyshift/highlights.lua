@@ -23,7 +23,9 @@ function M.set(palette)
         Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
         PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.red, bold = true },
 
-        Folded       = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
+        Folded       = { fg = palette.fg.dimmed, bg = palette.bg.medium, italic = true },
+        FoldColumn   = { fg = palette.accent.white, bg = palette.bg.medium },
+
         MatchParen   = { fg = palette.accent.yellow, bold = true },
     }
 
