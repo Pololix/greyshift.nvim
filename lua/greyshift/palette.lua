@@ -14,28 +14,28 @@ M.base = {
     },
 
     red = {
-        strong = "#d16969",
-        soft   = "#e08282",
+        dark  = "#d16969",
+        light = "#e08282",
     },
 
     yellow = {
-        strong = "#d7ba7d",
-        soft   = "#e5c890",
+        dark  = "#d7ba7d",
+        light = "#e5c890",
     },
 
     green = {
-        strong = "#8fbf7f",
-        soft   = "#a7d79a",
+        dark  = "#8fbf7f",
+        light = "#a7d79a",
     },
 
     blue = {
-        strong = "#6ea8d9",
-        soft   = "#8fc1eb",
+        dark  = "#6ea8d9",
+        light = "#8fc1eb",
     },
 
     purple = {
-        strong = "#b18ad6",
-        soft   = "#c7a3eb",
+        dark  = "#b18ad6",
+        light = "#c7a3eb",
     },
 }
 

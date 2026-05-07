@@ -5,7 +5,7 @@ function M.set(palette)
         Normal       = { fg = palette.fg.normal, bg = palette.bg.medium },
         Special      = { fg = palette.fg.normal },
 
-        WinSeparator = { fg = palette.bg.normal },
+        WinSeparator = { fg = palette.bg.light },
         NormalFloat  = { fg = palette.fg.normal, bg = palette.bg.dark },
         FloatBorder  = { fg = palette.fg.normal },
         Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
