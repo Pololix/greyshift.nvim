@@ -1,41 +1,41 @@
 local M = {}
 
 M.base = {
-    white = "#d2cec7",
+    white = "#d7dbe0",
 
     grey = {
-        darkest = "#101214",
-        darker  = "#15181b",
-        dark    = "#1c2024",
-        medium  = "#252a2f",
-        light   = "#32383f",
-        lighter = "#4a525b",
-        subtle  = "#646d78",
+        darkest = "#0f1113",
+        darker  = "#14171a",
+        dark    = "#1b1f24",
+        medium  = "#232830",
+        light   = "#313843",
+        lighter = "#495463",
+        subtle  = "#697586",
     },
 
     red = {
-        strong = "#c06f6a",
-        soft   = "#d08a84",
+        strong = "#d16969",
+        soft   = "#e08282",
     },
 
     yellow = {
-        strong = "#c2a46f",
-        soft   = "#d6ba84",
+        strong = "#d7ba7d",
+        soft   = "#e5c890",
     },
 
     green = {
-        strong = "#8faa72",
-        soft   = "#a3be86",
+        strong = "#8fbf7f",
+        soft   = "#a7d79a",
     },
 
     blue = {
-        strong = "#6f93b5",
-        soft   = "#8aaecc",
+        strong = "#6ea8d9",
+        soft   = "#8fc1eb",
     },
 
     purple = {
-        strong = "#9c86bd",
-        soft   = "#b19ad1",
+        strong = "#b18ad6",
+        soft   = "#c7a3eb",
     },
 }
 
