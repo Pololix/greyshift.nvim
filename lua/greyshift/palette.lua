@@ -1,39 +1,47 @@
 local M = {}
 
 M.base = {
-    white = "#d6d0c8",
+    white = "#d2cec7",
 
     grey = {
-        darker  = "#141618",
-        dark    = "#1b1e21",
-        medium  = "#23272b",
-        light   = "#31363c",
-        lighter = "#4a525a",
+        darkest = "#101214",
+        darker  = "#15181b",
+        dark    = "#1c2024",
+        medium  = "#252a2f",
+        light   = "#32383f",
+        lighter = "#4a525b",
+        subtle  = "#646d78",
     },
 
     red = {
-        strong = "#b06c6c",
-        soft   = "#c48787",
+        strong = "#c06f6a",
+        soft   = "#d08a84",
     },
 
     yellow = {
-        strong = "#b59a6a",
-        soft   = "#ccb07a",
+        strong = "#c2a46f",
+        soft   = "#d6ba84",
+    },
+
+    green = {
+        strong = "#8faa72",
+        soft   = "#a3be86",
     },
 
     blue = {
-        strong = "#6f8fa8",
-        soft   = "#8aa8bf",
+        strong = "#6f93b5",
+        soft   = "#8aaecc",
     },
 
-    green  = "#8fa97a",
-
-    purple = "#9a88b5",
+    purple = {
+        strong = "#9c86bd",
+        soft   = "#b19ad1",
+    },
 }
 
 M.fg = {
     normal = M.base.white,
-    dimmed = M.base.grey.darker,
+    dimmed = M.base.grey.subtle,
 }
 
 M.bg = {
