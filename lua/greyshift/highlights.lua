@@ -110,8 +110,8 @@ function M.set(palette)
     }
 
     for _, tbl in pairs(groups) do
-        for target, options in pairs(tbl) do
-            vim.api.nvim_set_hl(0, target, options)
+        for target, opts in pairs(tbl) do
+            vim.api.nvim_set_hl(0, target, opts)
         end
     end
 
