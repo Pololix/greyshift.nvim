@@ -115,7 +115,6 @@ function M.set(palette)
         end
     end
 
-    vim.g.set_greyshift = true
 end
 
 return M

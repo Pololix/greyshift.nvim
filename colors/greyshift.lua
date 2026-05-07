@@ -1,3 +1,8 @@
+vim.cmd("hi clear")
+if vim.fn.exists("syntax_on") then
+  vim.cmd("syntax reset")
+end
+
 vim.g.colors_name = "greyshift"
-vim.g.set_greyshift = false
-vim.g.loaded_greyshift = false
+
+require("greyshift").load()
