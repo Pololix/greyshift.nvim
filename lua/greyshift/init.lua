@@ -12,6 +12,7 @@ end
 function M.load()
     local palette = require("greyshift.palette")
     require("greyshift.highlights").set(palette)
+    vim.g.loaded_greyshift = true
 end
 
 return M

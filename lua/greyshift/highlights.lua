@@ -114,6 +114,8 @@ function M.set(palette)
             vim.api.nvim_set_hl(0, target, options)
         end
     end
+
+    vim.g.set_greyshift = true
 end
 
 return M
