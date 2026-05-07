@@ -8,13 +8,13 @@ function M.set(palette)
         FloatBorder  = { fg = palette.bg.accent },
 
         CursorLine   = { bg = palette.bg.light },
-        CursorLineNr = { fg = palette.accent.yellow, bold = true },
+        CursorLineNr = { fg = palette.base.yellow.strong, bold = true },
         LineNr       = { fg = palette.fg.dimmed },
 
         Visual       = { bg = palette.bg.accent },
 
         Search       = { bg = palette.bg.light, fg = palette.fg.normal },
-        IncSearch    = { bg = palette.accent.yellow, fg = palette.bg.dark, bold = true },
+        IncSearch    = { bg = palette.base.yellow.strong, fg = palette.bg.dark, bold = true },
 
         StatusLine   = { fg = palette.fg.normal, bg = palette.bg.dark },
         StatusLineNC = { fg = palette.fg.dimmed, bg = palette.bg.dark },
@@ -22,63 +22,63 @@ function M.set(palette)
         WinSeparator = { fg = palette.bg.light },
 
         Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
-        PmenuSel     = { fg = palette.bg.dark, bg = palette.accent.blue, bold = true },
+        PmenuSel     = { fg = palette.bg.dark, bg = palette.base.blue.strong, bold = true },
 
         Folded       = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
         FoldColumn   = { fg = palette.fg.dimmed, bg = palette.bg.medium },
 
-        MatchParen   = { fg = palette.accent.yellow, bold = true },
+        MatchParen   = { fg = palette.base.yellow.strong, bold = true },
     }
 
     M.syntax = {
         ["@comment"]      = { fg = palette.fg.dimmed, italic = true },
 
-        ["@keyword"]      = { fg = palette.accent.purple },
-        ["@function"]     = { fg = palette.accent.yellow },
+        ["@keyword"]      = { fg = palette.base.purple.strong },
+        ["@function"]     = { fg = palette.base.yellow.strong },
 
-        ["@string"]       = { fg = palette.accent.green },
-        ["@number"]       = { fg = palette.accent.yellow },
-        ["@boolean"]      = { fg = palette.accent.yellow },
+        ["@string"]       = { fg = palette.base.green.strong },
+        ["@number"]       = { fg = palette.base.yellow.medium },
+        ["@boolean"]      = { fg = palette.base.yellow.medium },
 
         ["@operator"]     = { fg = palette.fg.normal },
         ["@punctuation"]  = { fg = palette.fg.dimmed },
 
         ["@variable"]     = { fg = palette.fg.normal },
-        ["@parameter"]    = { fg = palette.accent.red },
+        ["@parameter"]    = { fg = palette.base.red.strong },
         ["@property"]     = { fg = palette.fg.normal },
-        ["@constant"]     = { fg = palette.accent.purple },
+        ["@constant"]     = { fg = palette.base.purple.strong },
 
-        ["@type"]         = { fg = palette.accent.blue },
-        ["@type.builtin"] = { fg = palette.accent.blue },
+        ["@type"]         = { fg = palette.base.blue.strong },
+        ["@type.builtin"] = { fg = palette.base.blue.medium },
     }
 
     M.diagnostics = {
-        DiagnosticError            = { fg = palette.accent.red },
-        DiagnosticWarn             = { fg = palette.accent.yellow },
-        DiagnosticInfo             = { fg = palette.accent.blue },
+        DiagnosticError            = { fg = palette.base.red.strong },
+        DiagnosticWarn             = { fg = palette.base.yellow.strong },
+        DiagnosticInfo             = { fg = palette.base.blue.strong },
         DiagnosticHint             = { fg = palette.fg.dimmed },
 
-        DiagnosticUnderlineError   = { undercurl = true, sp = palette.accent.red },
-        DiagnosticUnderlineWarn    = { undercurl = true, sp = palette.accent.yellow },
-        DiagnosticUnderlineInfo    = { undercurl = true, sp = palette.accent.blue },
+        DiagnosticUnderlineError   = { undercurl = true, sp = palette.base.red.strong },
+        DiagnosticUnderlineWarn    = { undercurl = true, sp = palette.base.yellow.strong },
+        DiagnosticUnderlineInfo    = { undercurl = true, sp = palette.base.blue.strong },
         DiagnosticUnderlineHint    = { undercurl = true, sp = palette.fg.dimmed },
 
-        DiagnosticVirtualTextError = { fg = palette.accent.red },
-        DiagnosticVirtualTextWarn  = { fg = palette.accent.yellow },
-        DiagnosticVirtualTextInfo  = { fg = palette.accent.blue },
+        DiagnosticVirtualTextError = { fg = palette.base.red.medium },
+        DiagnosticVirtualTextWarn  = { fg = palette.base.yellow.medium },
+        DiagnosticVirtualTextInfo  = { fg = palette.base.blue.medium },
         DiagnosticVirtualTextHint  = { fg = palette.fg.dimmed },
     }
 
     M.git = {
         DiffText       = { fg = palette.fg.normal },
 
-        DiffAdd        = { fg = palette.accent.green },
-        DiffDelete     = { fg = palette.accent.red },
-        DiffChange     = { fg = palette.accent.yellow },
+        DiffAdd        = { fg = palette.base.green.strong },
+        DiffDelete     = { fg = palette.base.red.strong },
+        DiffChange     = { fg = palette.base.yellow.strong },
 
-        GitSignsAdd    = { fg = palette.accent.green },
-        GitSignsDelete = { fg = palette.accent.red },
-        GitSignsChange = { fg = palette.accent.yellow },
+        GitSignsAdd    = { fg = palette.base.green.strong },
+        GitSignsDelete = { fg = palette.base.red.strong },
+        GitSignsChange = { fg = palette.base.yellow.medium },
     }
 
     M.plugins = {
@@ -91,17 +91,17 @@ function M.set(palette)
         NeoTreeIndentMarker  = { fg = palette.fg.dimmed },
         NeoTreeExpander      = { fg = palette.fg.dimmed },
 
-        NeoTreeDirectoryName = { fg = palette.accent.yellow },
-        NeoTreeDirectoryIcon = { fg = palette.accent.yellow },
+        NeoTreeDirectoryName = { fg = palette.base.yellow.strong },
+        NeoTreeDirectoryIcon = { fg = palette.base.yellow.medium },
 
         NeoTreeFileName      = { fg = palette.fg.normal },
         NeoTreeFileIcon      = { fg = palette.fg.dimmed },
 
-        NeoTreeRootName      = { fg = palette.accent.red, bold = true },
+        NeoTreeRootName      = { fg = palette.base.red.strong, bold = true },
 
-        NeoTreeGitAdded      = { fg = palette.accent.green },
-        NeoTreeGitDeleted    = { fg = palette.accent.red },
-        NeoTreeGitModified   = { fg = palette.accent.yellow },
+        NeoTreeGitAdded      = { fg = palette.base.green.strong },
+        NeoTreeGitDeleted    = { fg = palette.base.red.strong },
+        NeoTreeGitModified   = { fg = palette.base.yellow.strong },
         NeoTreeGitUntracked  = { fg = palette.fg.dimmed },
     }
 

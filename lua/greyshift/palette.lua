@@ -1,23 +1,48 @@
-return {
-    bg     = {
-        light  = "#38383f",
-        medium = "#2f2f34",
-        dark   = "#26262a",
-        accent = "#3e3e45",
-    },
-    fg     = {
-        normal = "#d7d7dd",
-        dimmed = "#7b7b85",
-    },
-    accent = {
-        white  = "#d7d7dd",
-        grey   = "#8c8c8c",
+local M = {}
 
-        red    = "#c95a5a",
-        yellow = "#c9a24a",
-        green  = "#3aa66f",
-        purple = "#7f63d8",
-        blue   = "#4a8ecf",
+M.base = {
+    white  = "#e8d8be",
+    grey   = {
+        darker  = "#1c1814",
+        dark    = "#242018",
+        medium  = "#23281e",
+        light   = "#3a3228",
+        lighter = "#625648",
     },
-    none   = "NONE"
+
+    red    = {
+        strong = "#a05848",
+        soft   = "#c87060",
+    },
+
+    yellow = {
+        strong = "#a88040",
+        soft   = "#d0a458",
+    },
+
+    blue   = {
+        strong = "#607888",
+        soft   = "#7a9cac",
+    },
+
+    green  = "#8aae72",
+
+    purple = "#9878a0",
 }
+
+M.fg = {
+    normal = M.base.white,
+    dimmed = M.base.grey.darker,
+}
+
+M.bg = {
+    dark   = M.base.grey.dark,
+    medium = M.base.grey.medium,
+    light  = M.base.grey.light,
+
+    accent = M.base.grey.lighter,
+}
+
+M.none = "NONE"
+
+return M

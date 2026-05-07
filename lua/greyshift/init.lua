@@ -1,11 +1,12 @@
 local M = {}
 
-M.options = {
-    -- empty for now
+M.opts = {
+
 }
 
-function M.setup()
-    -- empty for now
+function M.setup(opts)
+    M.opts = vim.tbl_extend_deep("force", M.opts, opts or {})
+    M.load()
 end
 
 function M.load()
