@@ -12,7 +12,7 @@ function M.build(semantics, palette)
         FloatBorder  = { smt = semantics.ui.border },
 
         LineNr       = { smt = semantics.ui.details },
-        CursorLineNr = { smt = semantics.ui.details, { fg = palette.base.yellow.dark, bold = true } },
+        CursorLineNr = { smt = semantics.ui.details, ovr = { fg = palette.base.yellow.dark, bold = true } },
         SignColumn   = { smt = semantics.ui.details },
         FoldColumn   = { smt = semantics.ui.details },
 
@@ -128,7 +128,7 @@ function M.build(semantics, palette)
     H.notify = {
         NotifyERROR = { smt = semantics.diagnostics.error },
         NotifyINFO  = { smt = semantics.diagnostics.info },
-        NotifyWARN  = { smt = semantics.diagnostics.warn },
+        NotifyWARN  = { smt = semantics.diagnostics.warning },
         NotifyDEBUG = { smt = semantics.diagnostics.hint },
         NotifyTRACE = { smt = semantics.diagnostics.hint },
     }
