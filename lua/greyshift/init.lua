@@ -13,8 +13,13 @@ function M.load()
     local semantics  = require("greyshift.semantics").build(palette)
     local highlights = require("greyshift.highlights").build(semantics)
 
-    for _, conts in pairs(highlights) do
-        for target, opts in pairs(conts) do
+    M.apply(highlights)
+end
+
+function M.apply(hl)
+    for _, group in pairs(hl) do
+        for target, desc in pairs(group) do
+            local opts = vim.tbl_deep_extend("force", desc.smt, desc.ovr or {})
             vim.api.nvim_set_hl(0, target, opts)
         end
     end

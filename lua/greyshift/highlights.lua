@@ -1,136 +1,136 @@
 local M = {}
 
-function M.build(semantics)
+function M.build(semantics, palette)
     local H = {}
 
     H.ui = {
-        Normal       = semantics.text.normal,
-        CursorLine   = semantics.text.cursor,
-        Folded       = semantics.text.dimmed,
+        Normal       = { smt = semantics.text.normal },
+        CursorLine   = { smt = semantics.text.cursor },
+        Folded       = { smt = semantics.text.dimmed },
 
-        NormalFloat  = semantics.ui.float,
-        FloatBorder  = semantics.ui.border,
+        NormalFloat  = { smt = semantics.ui.float },
+        FloatBorder  = { smt = semantics.ui.border },
 
-        LineNr       = semantics.ui.details,
-        CursorLineNr = semantics.ui.details,
-        SignColumn   = semantics.ui.details,
-        FoldColumn   = semantics.ui.details,
+        LineNr       = { smt = semantics.ui.details },
+        CursorLineNr = { smt = semantics.ui.details, { fg = palette.base.yellow.dark, bold = true } },
+        SignColumn   = { smt = semantics.ui.details },
+        FoldColumn   = { smt = semantics.ui.details },
 
-        StatusLine   = semantics.ui.float,
-        StatusLineNC = semantics.ui.float,
+        StatusLine   = { smt = semantics.ui.float },
+        StatusLineNC = { smt = semantics.ui.float },
 
-        Visual       = semantics.ui.selection,
+        Visual       = { smt = semantics.ui.selection },
 
-        Search       = semantics.ui.search,
-        IncSearch    = semantics.ui.inc_search,
+        Search       = { smt = semantics.ui.search },
+        IncSearch    = { smt = semantics.ui.inc_search },
 
-        WinSeparator = semantics.ui.separator,
-        VertSplit    = semantics.ui.separator,
-        MatchParen   = semantics.text.normal,
+        WinSeparator = { smt = semantics.ui.separator },
+        VertSplit    = { smt = semantics.ui.separator },
+        MatchParen   = { smt = semantics.text.normal },
     }
 
     H.syntax = {
-        ["@comment"]         = semantics.syntax.comments,
+        ["@comment"]         = { smt = semantics.syntax.comments },
 
-        ["@keyword"]         = semantics.syntax.keywords,
+        ["@keyword"]         = { smt = semantics.syntax.keywords },
 
-        ["@function"]        = semantics.syntax.functions,
-        ["@method"]          = semantics.syntax.functions,
-        ["@constructor"]     = semantics.syntax.functions,
+        ["@function"]        = { smt = semantics.syntax.functions },
+        ["@method"]          = { smt = semantics.syntax.functions },
+        ["@constructor"]     = { smt = semantics.text.normal },
 
-        ["@type"]            = semantics.syntax.types,
-        ["@type.builtin"]    = semantics.syntax.types,
+        ["@type"]            = { smt = semantics.syntax.types },
+        ["@type.builtin"]    = { smt = semantics.syntax.types },
 
-        ["@variable"]        = semantics.syntax.variables,
-        ["@parameter"]       = semantics.syntax.variables,
-        ["@property"]        = semantics.syntax.variables,
-        ["@field"]           = semantics.syntax.variables,
+        ["@variable"]        = { smt = semantics.syntax.variables },
+        ["@parameter"]       = { smt = semantics.syntax.variables },
+        ["@property"]        = { smt = semantics.syntax.variables },
+        ["@field"]           = { smt = semantics.syntax.variables },
 
-        ["@constant"]        = semantics.syntax.constants,
+        ["@constant"]        = { smt = semantics.syntax.constants },
+        ["@constant.bultin"] = { smt = semantics.syntax.constants },
 
-        ["@string"]          = semantics.syntax.constants,
-        ["@number"]          = semantics.syntax.constants,
-        ["@boolean"]         = semantics.syntax.constants,
+        ["@string"]          = { smt = semantics.syntax.constants },
+        ["@number"]          = { smt = semantics.syntax.constants },
+        ["@boolean"]         = { smt = semantics.syntax.constants },
 
-        ["@operator"]        = semantics.syntax.operators,
-        ["@punctuation"]     = semantics.syntax.punctuation,
+        ["@operator"]        = { smt = semantics.syntax.operators },
+        ["@punctuation"]     = { smt = semantics.syntax.punctuation },
     }
 
     H.diagnostics = {
-        DiagnosticError            = semantics.diagnostics.error,
-        DiagnosticWarn             = semantics.diagnostics.warning,
-        DiagnosticInfo             = semantics.diagnostics.info,
-        DiagnosticHint             = semantics.diagnostics.hint,
+        DiagnosticError            = { smt = semantics.diagnostics.error },
+        DiagnosticWarn             = { smt = semantics.diagnostics.warning },
+        DiagnosticInfo             = { smt = semantics.diagnostics.info },
+        DiagnosticHint             = { smt = semantics.diagnostics.hint },
 
-        DiagnosticUnderlineError   = semantics.diagnostics.error,
-        DiagnosticUnderlineWarn    = semantics.diagnostics.warning,
-        DiagnosticUnderlineInfo    = semantics.diagnostics.info,
-        DiagnosticUnderlineHint    = semantics.diagnostics.hint,
+        DiagnosticUnderlineError   = { smt = semantics.diagnostics.error },
+        DiagnosticUnderlineWarn    = { smt = semantics.diagnostics.warning },
+        DiagnosticUnderlineInfo    = { smt = semantics.diagnostics.info },
+        DiagnosticUnderlineHint    = { smt = semantics.diagnostics.hint },
 
-        DiagnosticVirtualTextError = semantics.diagnostics.error,
-        DiagnosticVirtualTextWarn  = semantics.diagnostics.warning,
-        DiagnosticVirtualTextInfo  = semantics.diagnostics.info,
-        DiagnosticVirtualTextHint  = semantics.diagnostics.hint,
+        DiagnosticVirtualTextError = { smt = semantics.diagnostics.error },
+        DiagnosticVirtualTextWarn  = { smt = semantics.diagnostics.warning },
+        DiagnosticVirtualTextInfo  = { smt = semantics.diagnostics.info },
+        DiagnosticVirtualTextHint  = { smt = semantics.diagnostics.hint },
     }
 
     H.git = {
-        DiffText       = semantics.text.normal,
+        DiffText       = { smt = semantics.text.normal },
 
-        DiffAdd        = semantics.git.added,
-        DiffDelete     = semantics.git.removed,
-        DiffChange     = semantics.git.changed,
-        DiffRename     = semantics.git.changed,
+        DiffAdd        = { smt = semantics.git.added },
+        DiffDelete     = { smt = semantics.git.removed },
+        DiffChange     = { smt = semantics.git.changed },
+        DiffRename     = { smt = semantics.git.changed },
 
-        GitSignsAdd    = semantics.git.added,
-        GitSignsDelete = semantics.git.removed,
-        GitSignsChange = semantics.git.changed,
-
+        GitSignsAdd    = { smt = semantics.git.added },
+        GitSignsDelete = { smt = semantics.git.removed },
+        GitSignsChange = { smt = semantics.git.changed },
     }
 
     H.plugins = {
         -- Neotree
-        NeoTreeNormal           = semantics.text.normal,
-        NeoTreeCursorLine       = semantics.text.cursor,
+        NeoTreeNormal           = { smt = semantics.text.normal },
+        NeoTreeCursorLine       = { smt = semantics.text.cursor },
 
-        NeoTreeRootName         = semantics.file_explorer.root,
+        NeoTreeRootName         = { smt = semantics.file_explorer.root },
 
-        NeoTreeDirectoryName    = semantics.file_explorer.directory,
-        NeoTreeDirectoryIcon    = semantics.file_explorer.directory,
-        NeoTreeFileName         = semantics.file_explorer.file,
+        NeoTreeDirectoryName    = { smt = semantics.file_explorer.directory },
+        NeoTreeDirectoryIcon    = { smt = semantics.file_explorer.directory },
+        NeoTreeFileName         = { smt = semantics.file_explorer.file },
 
-        NeoTreeIndentMarker     = semantics.ui.details,
-        NeoTreeExpander         = semantics.ui.details,
+        NeoTreeIndentMarker     = { smt = semantics.ui.details },
+        NeoTreeExpander         = { smt = semantics.ui.details },
 
-        NeoTreeGitAdded         = semantics.git.added,
-        NeoTreeGitDeleted       = semantics.git.removed,
-        NeoTreeGitModified      = semantics.git.changed,
-        NeoTreeGitUntracked     = semantics.git.untracked,
+        NeoTreeGitAdded         = { smt = semantics.git.added },
+        NeoTreeGitDeleted       = { smt = semantics.git.removed },
+        NeoTreeGitModified      = { smt = semantics.git.changed },
+        NeoTreeGitUntracked     = { smt = semantics.git.untracked },
 
         -- Telescope
-        TelescopeNormal         = semantics.text.normal,
-        TelescopeBorder         = semantics.ui.border,
-        TelescopePrompt         = semantics.text.normal,
-        TelescopeSelection      = semantics.text.selection,
-        TelescopeMultiSelection = semantics.text.selection,
+        TelescopeNormal         = { smt = semantics.text.normal },
+        TelescopeBorder         = { smt = semantics.ui.border },
+        TelescopePrompt         = { smt = semantics.text.normal },
+        TelescopeSelection      = { smt = semantics.text.selection },
+        TelescopeMultiSelection = { smt = semantics.text.selection },
 
         -- Nvim-cmp
-        CmpNormal               = semantics.text.normal,
-        CmpBorder               = semantics.ui.border,
-        CmpDocumentation        = semantics.text.normal,
-        CmpDocBorder            = semantics.ui.border,
+        CmpNormal               = { smt = semantics.text.normal },
+        CmpBorder               = { smt = semantics.ui.border },
+        CmpDocumentation        = { smt = semantics.text.normal },
+        CmpDocBorder            = { smt = semantics.ui.border },
 
-        CmpItemAbbr             = semantics.text.normal,
-        CmpItemKind             = semantics.syntax.types,
-        CmpItemMenu             = semantics.text.dimmed,
-        CmpItemSelected         = semantics.text.selection,
+        CmpItemAbbr             = { smt = semantics.text.normal },
+        CmpItemKind             = { smt = semantics.syntax.types },
+        CmpItemMenu             = { smt = semantics.text.dimmed },
+        CmpItemSelected         = { smt = semantics.text.selection },
     }
 
     H.notify = {
-        NotifyERROR = semantics.diagnostics.error,
-        NotifyINFO  = semantics.diagnostics.info,
-        NotifyWARN  = semantics.diagnostics.warn,
-        NotifyDEBUG = semantics.diagnostics.hint,
-        NotifyTRACE = semantics.diagnostics.hint,
+        NotifyERROR = { smt = semantics.diagnostics.error },
+        NotifyINFO  = { smt = semantics.diagnostics.info },
+        NotifyWARN  = { smt = semantics.diagnostics.warn },
+        NotifyDEBUG = { smt = semantics.diagnostics.hint },
+        NotifyTRACE = { smt = semantics.diagnostics.hint },
     }
 
     return H

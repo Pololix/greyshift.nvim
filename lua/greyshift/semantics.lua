@@ -62,6 +62,14 @@ function M.build(palette)
             underline = false,
         },
 
+        details = {
+            fg        = palette.grey.lightest,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
         cursor_line_nr = {
             fg        = palette.base.yellow.dark,
             bg        = nil,
@@ -113,7 +121,15 @@ function M.build(palette)
         },
 
         variables = {
-            fg        = palette.base.white,
+            fg        = palette.base.red.light,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
+        constants = {
+            fg        = palette.base.purple.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -123,7 +139,7 @@ function M.build(palette)
 
     S.diagnostics = {
         error = {
-            fg        = palette.base.red.dark,
+            fg        = palette.base.red.light,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -131,7 +147,7 @@ function M.build(palette)
         },
 
         warning = {
-            fg        = palette.base.yellow.dark,
+            fg        = palette.base.yellow.light,
             bg        = nil,
             bold      = false,
             italic    = false,
