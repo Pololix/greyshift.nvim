@@ -54,6 +54,14 @@ function M.build(palette)
             underline = false,
         },
 
+        border = {
+            fg        = palette.base.white,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
         separator = {
             fg        = palette.base.white,
             bg        = nil,
@@ -106,6 +114,14 @@ function M.build(palette)
 
         types = {
             fg        = palette.base.red.dark,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
+        punctuation = {
+            fg        = palette.base.white,
             bg        = nil,
             bold      = false,
             italic    = false,

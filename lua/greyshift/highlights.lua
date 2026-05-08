@@ -19,10 +19,10 @@ function M.build(semantics, palette)
         StatusLine   = { smt = semantics.ui.float },
         StatusLineNC = { smt = semantics.ui.float },
 
-        Visual       = { smt = semantics.ui.selection },
+        Visual       = { smt = semantics.text.selection },
 
-        Search       = { smt = semantics.ui.search },
-        IncSearch    = { smt = semantics.ui.inc_search },
+        Search       = { smt = semantics.text.search },
+        IncSearch    = { smt = semantics.text.search },
 
         WinSeparator = { smt = semantics.ui.separator },
         VertSplit    = { smt = semantics.ui.separator },

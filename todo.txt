@@ -1,4 +1,0 @@
-introduce an override and relative change system in highlights
-
-ej comments = dimmed but in italic (override)
-   search = visual but brighter (relative change)
