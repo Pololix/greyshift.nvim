@@ -74,7 +74,7 @@ function M.build(semantics)
     }
 
     H.git = {
-        DiffText       = semantics.ui.normal,
+        DiffText       = semantics.text.normal,
 
         DiffAdd        = semantics.git.added,
         DiffDelete     = semantics.git.removed,
@@ -89,8 +89,8 @@ function M.build(semantics)
 
     H.plugins = {
         -- Neotree
-        NeoTreeNormal           = semantics.ui.normal,
-        NeoTreeCursorLine       = semantics.ui.cursor_line,
+        NeoTreeNormal           = semantics.text.normal,
+        NeoTreeCursorLine       = semantics.text.cursor,
 
         NeoTreeRootName         = semantics.file_explorer.root,
 
@@ -119,10 +119,10 @@ function M.build(semantics)
         CmpDocumentation        = semantics.text.normal,
         CmpDocBorder            = semantics.ui.border,
 
-        CmpItemAbbr             = semantics.cmp.item_abbr,
-        CmpItemKind             = semantics.cmp.item_kind,
-        CmpItemMenu             = semantics.cmp.item_menu,
-        CmpItemSelected         = semantics.cmp.selected,
+        CmpItemAbbr             = semantics.text.normal,
+        CmpItemKind             = semantics.syntax.types,
+        CmpItemMenu             = semantics.text.dimmed,
+        CmpItemSelected         = semantics.text.selection,
     }
 
     H.notify = {
