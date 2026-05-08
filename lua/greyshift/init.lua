@@ -11,7 +11,7 @@ end
 function M.load()
     local palette    = require("greyshift.palette")
     local semantics  = require("greyshift.semantics").build(palette)
-    local highlights = require("greyshift.highlights").build(semantics)
+    local highlights = require("greyshift.highlights").build(semantics, palette)
 
     M.apply(highlights)
 end
