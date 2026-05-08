@@ -63,7 +63,7 @@ function M.build(palette)
         },
 
         details = {
-            fg        = palette.grey.lightest,
+            fg        = palette.base.grey.lightest,
             bg        = nil,
             bold      = false,
             italic    = false,
