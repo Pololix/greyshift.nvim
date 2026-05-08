@@ -4,13 +4,13 @@ M.base = {
     white = "#d7dbe0",
 
     grey = {
-        darkest = "#0f1113",
-        darker  = "#14171a",
-        dark    = "#1b1f24",
-        medium  = "#232830",
-        light   = "#313843",
-        lighter = "#495463",
-        subtle  = "#697586",
+        darkest  = "#0f1113",
+        darker   = "#14171a",
+        dark     = "#1b1f24",
+        medium   = "#232830",
+        light    = "#313843",
+        lighter  = "#495463",
+        lightest = "#697586",
     },
 
     red = {
@@ -38,20 +38,5 @@ M.base = {
         light = "#c7a3eb",
     },
 }
-
-M.fg = {
-    normal = M.base.white,
-    dimmed = M.base.grey.subtle,
-}
-
-M.bg = {
-    dark   = M.base.grey.dark,
-    medium = M.base.grey.medium,
-    light  = M.base.grey.light,
-
-    accent = M.base.grey.lighter,
-}
-
-M.none = "NONE"
 
 return M

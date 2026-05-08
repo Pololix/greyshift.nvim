@@ -1,124 +1,139 @@
 local M = {}
 
-function M.set(palette)
-    M.ui = {
-        Normal       = { fg = palette.fg.normal, bg = palette.bg.medium },
-        Special      = { fg = palette.fg.normal },
+function M.build(semantics)
+    local H = {}
 
-        WinSeparator = { fg = palette.bg.light },
-        NormalFloat  = { fg = palette.fg.normal, bg = palette.bg.dark },
-        FloatBorder  = { fg = palette.fg.normal },
-        Pmenu        = { fg = palette.fg.normal, bg = palette.bg.dark },
-        PmenuSel     = { fg = palette.base.grey.dark, bg = palette.base.blue.dark, bold = true, },
+    H.ui = {
+        Normal       = semantics.text.normal,
+        CursorLine   = semantics.text.cursor,
+        Folded       = semantics.text.dimmed,
 
-        CursorLine   = { bg = palette.bg.light },
-        CursorLineNr = { fg = palette.base.yellow.dark, bold = true },
-        LineNr       = { fg = palette.fg.dimmed },
+        NormalFloat  = semantics.ui.float,
+        FloatBorder  = semantics.ui.border,
 
-        Visual       = { bg = palette.bg.accent },
-        Search       = { fg = palette.fg.normal, bg = palette.bg.light },
-        IncSearch    = { fg = palette.base.grey.dark, bold = true, bg = palette.base.yellow.dark },
+        LineNr       = semantics.ui.details,
+        CursorLineNr = semantics.ui.details,
+        SignColumn   = semantics.ui.details,
+        FoldColumn   = semantics.ui.details,
 
-        StatusLine   = { fg = palette.fg.normal, bg = palette.bg.dark },
-        StatusLineNC = { fg = palette.fg.dimmed, bg = palette.bg.dark },
+        StatusLine   = semantics.ui.float,
+        StatusLineNC = semantics.ui.float,
 
-        Folded       = { fg = palette.fg.dimmed, bg = palette.bg.dark, italic = true },
-        FoldColumn   = { fg = palette.fg.dimmed, bg = palette.bg.medium },
+        Visual       = semantics.ui.selection,
 
-        MatchParen   = { fg = palette.base.yellow.dark, bold = true },
+        Search       = semantics.ui.search,
+        IncSearch    = semantics.ui.inc_search,
+
+        WinSeparator = semantics.ui.separator,
+        VertSplit    = semantics.ui.separator,
+        MatchParen   = semantics.text.normal,
     }
 
-    M.syntax = {
-        ["@comment"]      = { fg = palette.fg.dimmed, italic = true },
+    H.syntax = {
+        ["@comment"]         = semantics.syntax.comments,
 
-        ["@keyword"]      = { fg = palette.base.purple.dark },
-        ["@function"]     = { fg = palette.base.yellow.dark },
-        ["@type"]         = { fg = palette.base.red.dark },
-        ["@type.builtin"] = { fg = palette.base.red.dark },
+        ["@keyword"]         = semantics.syntax.keywords,
 
-        ["@string"]       = { fg = palette.base.green.dark },
-        ["@number"]       = { fg = palette.base.yellow.light },
-        ["@boolean"]      = { fg = palette.base.yellow.light },
+        ["@function"]        = semantics.syntax.functions,
+        ["@method"]          = semantics.syntax.functions,
+        ["@constructor"]     = semantics.syntax.functions,
 
-        ["@operator"]     = { fg = palette.fg.normal },
-        ["@punctuation"]  = { fg = palette.fg.normal },
+        ["@type"]            = semantics.syntax.types,
+        ["@type.builtin"]    = semantics.syntax.types,
 
-        ["@variable"]     = { fg = palette.fg.normal },
-        ["@parameter"]    = { fg = palette.base.red.light },
-        ["@property"]     = { fg = palette.base.red.light },
+        ["@variable"]        = semantics.syntax.variables,
+        ["@parameter"]       = semantics.syntax.variables,
+        ["@property"]        = semantics.syntax.variables,
+        ["@field"]           = semantics.syntax.variables,
 
-        ["@constant"]     = { fg = palette.base.purple.light, bold = true },
+        ["@constant"]        = semantics.syntax.constants,
+
+        ["@string"]          = semantics.syntax.constants,
+        ["@number"]          = semantics.syntax.constants,
+        ["@boolean"]         = semantics.syntax.constants,
+
+        ["@operator"]        = semantics.syntax.operators,
+        ["@punctuation"]     = semantics.syntax.punctuation,
     }
 
-    M.diagnostics = {
-        DiagnosticError            = { fg = palette.base.red.dark },
-        DiagnosticWarn             = { fg = palette.base.yellow.dark },
-        DiagnosticInfo             = { fg = palette.base.blue.dark },
-        DiagnosticHint             = { fg = palette.fg.dimmed },
+    H.diagnostics = {
+        DiagnosticError            = semantics.diagnostics.error,
+        DiagnosticWarn             = semantics.diagnostics.warning,
+        DiagnosticInfo             = semantics.diagnostics.info,
+        DiagnosticHint             = semantics.diagnostics.hint,
 
-        DiagnosticUnderlineError   = { undercurl = true, sp = palette.base.red.dark },
-        DiagnosticUnderlineWarn    = { undercurl = true, sp = palette.base.yellow.dark },
-        DiagnosticUnderlineInfo    = { undercurl = true, sp = palette.base.blue.dark },
-        DiagnosticUnderlineHint    = { undercurl = true, sp = palette.fg.dimmed },
+        DiagnosticUnderlineError   = semantics.diagnostics.error,
+        DiagnosticUnderlineWarn    = semantics.diagnostics.warning,
+        DiagnosticUnderlineInfo    = semantics.diagnostics.info,
+        DiagnosticUnderlineHint    = semantics.diagnostics.hint,
 
-        DiagnosticVirtualTextError = { fg = palette.base.red.light },
-        DiagnosticVirtualTextWarn  = { fg = palette.base.yellow.light },
-        DiagnosticVirtualTextInfo  = { fg = palette.base.blue.light },
-        DiagnosticVirtualTextHint  = { fg = palette.fg.dimmed },
+        DiagnosticVirtualTextError = semantics.diagnostics.error,
+        DiagnosticVirtualTextWarn  = semantics.diagnostics.warning,
+        DiagnosticVirtualTextInfo  = semantics.diagnostics.info,
+        DiagnosticVirtualTextHint  = semantics.diagnostics.hint,
     }
 
-    M.git = {
-        DiffText       = { fg = palette.fg.normal },
+    H.git = {
+        DiffText       = semantics.ui.normal,
 
-        DiffAdd        = { fg = palette.base.green.light },
-        DiffDelete     = { fg = palette.base.red.light },
-        DiffChange     = { fg = palette.base.yellow.light },
+        DiffAdd        = semantics.git.added,
+        DiffDelete     = semantics.git.removed,
+        DiffChange     = semantics.git.changed,
+        DiffRename     = semantics.git.changed,
 
-        GitSignsAdd    = { fg = palette.base.green.dark },
-        GitSignsDelete = { fg = palette.base.red.dark },
-        GitSignsChange = { fg = palette.base.yellow.dark },
+        GitSignsAdd    = semantics.git.added,
+        GitSignsDelete = semantics.git.removed,
+        GitSignsChange = semantics.git.changed,
+
     }
 
-    M.plugins = {
+    H.plugins = {
         -- Neotree
-        NeoTreeCursorLine    = { bg = palette.bg.medium, },
-        NeoTreeNormal        = { fg = palette.fg.normal, bg = palette.bg.dark, },
-        NeoTreeNormalNC      = { fg = palette.fg.dimmed, bg = palette.bg.dark, },
+        NeoTreeNormal           = semantics.ui.normal,
+        NeoTreeCursorLine       = semantics.ui.cursor_line,
 
-        NeoTreeIndentMarker  = { fg = palette.fg.dimmed, },
-        NeoTreeExpander      = { fg = palette.fg.dimmed, },
+        NeoTreeRootName         = semantics.file_explorer.root,
 
-        NeoTreeDirectoryName = { fg = palette.base.yellow.dark, },
-        NeoTreeDirectoryIcon = { fg = palette.base.yellow.dark, },
-        NeoTreeFileName      = { fg = palette.fg.normal, },
-        NeoTreeFileIcon      = { fg = palette.fg.normal, },
+        NeoTreeDirectoryName    = semantics.file_explorer.directory,
+        NeoTreeDirectoryIcon    = semantics.file_explorer.directory,
+        NeoTreeFileName         = semantics.file_explorer.file,
 
-        NeoTreeRootName      = { fg = palette.base.red.dark, bold = true, },
+        NeoTreeIndentMarker     = semantics.ui.details,
+        NeoTreeExpander         = semantics.ui.details,
 
-        NeoTreeGitAdded      = { fg = palette.base.green.dark, },
-        NeoTreeGitDeleted    = { fg = palette.base.red.dark, },
-        NeoTreeGitModified   = { fg = palette.base.yellow.dark, },
-        NeoTreeGitUntracked  = { fg = palette.fg.dimmed, },
+        NeoTreeGitAdded         = semantics.git.added,
+        NeoTreeGitDeleted       = semantics.git.removed,
+        NeoTreeGitModified      = semantics.git.changed,
+        NeoTreeGitUntracked     = semantics.git.untracked,
+
+        -- Telescope
+        TelescopeNormal         = semantics.text.normal,
+        TelescopeBorder         = semantics.ui.border,
+        TelescopePrompt         = semantics.text.normal,
+        TelescopeSelection      = semantics.text.selection,
+        TelescopeMultiSelection = semantics.text.selection,
+
+        -- Nvim-cmp
+        CmpNormal               = semantics.text.normal,
+        CmpBorder               = semantics.ui.border,
+        CmpDocumentation        = semantics.text.normal,
+        CmpDocBorder            = semantics.ui.border,
+
+        CmpItemAbbr             = semantics.cmp.item_abbr,
+        CmpItemKind             = semantics.cmp.item_kind,
+        CmpItemMenu             = semantics.cmp.item_menu,
+        CmpItemSelected         = semantics.cmp.selected,
     }
 
-    local groups = {
-        M.ui,
-        M.syntax,
-        M.diagnostics,
-        M.git,
-        M.plugins,
+    H.notify = {
+        NotifyERROR = semantics.diagnostics.error,
+        NotifyINFO  = semantics.diagnostics.info,
+        NotifyWARN  = semantics.diagnostics.warn,
+        NotifyDEBUG = semantics.diagnostics.hint,
+        NotifyTRACE = semantics.diagnostics.hint,
     }
 
-    for _, tbl in pairs(groups) do
-        for target, opts in pairs(tbl) do
-            if not tbl[target] then
-                vim.notify(target .. " is not a valid hl target", vim.logs.levels.ERROR)
-            end
-
-            vim.api.nvim_set_hl(0, target, opts)
-        end
-    end
-
+    return H
 end
 
 return M
