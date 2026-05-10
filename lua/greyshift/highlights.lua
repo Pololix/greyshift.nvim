@@ -44,8 +44,8 @@ function M.build(semantics, palette)
 
         ["@variable"]        = { smt = semantics.syntax.variables },
         ["@parameter"]       = { smt = semantics.syntax.variables, ovr = { fg = palette.red.light } },
-        ["@property"]        = { smt = semantics.syntax.variables },
-        ["@field"]           = { smt = semantics.syntax.variables },
+        ["@property"]        = { smt = semantics.syntax.variables, ovr = { fg = palette.red.dark } },
+        ["@field"]           = { smt = semantics.syntax.variables, ovr = { fg = palette.red.dark } },
 
         ["@constant"]        = { smt = semantics.syntax.constants },
         ["@constant.bultin"] = { smt = semantics.syntax.constants },
@@ -90,8 +90,9 @@ function M.build(semantics, palette)
 
     H.plugins = {
         -- Neotree
-        NeoTreeNormal           = { smt = semantics.text.normal, ovr = { bg = palette.grey.dark } },
-        NeoTreeCursorLine       = { smt = semantics.text.cursor, ovr = { bg = palette.grey.mediun } },
+        NeoTreeNormal           = { smt = semantics.text.normal },
+        NeoTreeCursorLine       = { smt = semantics.text.cursor },
+        NeoTreeNormalNC         = { smt = semantics.text.normal, ovr = { bg = palette.grey.dark } },
 
         NeoTreeRootName         = { smt = semantics.file_explorer.root },
 
