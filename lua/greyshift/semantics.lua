@@ -5,8 +5,8 @@ function M.build(palette)
 
     S.text = {
         normal = {
-            fg        = palette.base.white,
-            bg        = palette.base.grey.medium,
+            fg        = palette.white,
+            bg        = palette.grey.medium,
             bold      = false,
             italic    = false,
             underline = false,
@@ -14,7 +14,7 @@ function M.build(palette)
 
         dimmed = {
             fg        = nil,
-            bg        = palette.base.grey.lightest,
+            bg        = palette.grey.lightest,
             bold      = false,
             italic    = false,
             underline = false,
@@ -22,7 +22,7 @@ function M.build(palette)
 
         cursor = {
             fg        = nil,
-            bg        = palette.base.grey.light,
+            bg        = palette.grey.light,
             bold      = false,
             italic    = false,
             underline = false,
@@ -30,15 +30,15 @@ function M.build(palette)
 
         selection = {
             fg        = nil,
-            bg        = palette.base.grey.lighter,
+            bg        = palette.grey.lighter,
             bold      = false,
             italic    = false,
             underline = false,
         },
 
         search = {
-            fg        = palette.base.grey.dark,
-            bg        = palette.base.yellow.dark,
+            fg        = palette.grey.dark,
+            bg        = palette.yellow.dark,
             bold      = false,
             italic    = false,
             underline = false,
@@ -47,15 +47,15 @@ function M.build(palette)
 
     S.ui = {
         float = {
-            fg        = palette.base.white,
-            bg        = palette.base.grey.dark,
+            fg        = palette.white,
+            bg        = palette.grey.dark,
             bold      = false,
             italic    = false,
             underline = false,
         },
 
         border = {
-            fg        = palette.base.white,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -63,7 +63,7 @@ function M.build(palette)
         },
 
         separator = {
-            fg        = palette.base.white,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -71,7 +71,7 @@ function M.build(palette)
         },
 
         details = {
-            fg        = palette.base.grey.lightest,
+            fg        = palette.grey.lightest,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -79,7 +79,7 @@ function M.build(palette)
         },
 
         cursor_line_nr = {
-            fg        = palette.base.yellow.dark,
+            fg        = palette.yellow.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -89,7 +89,7 @@ function M.build(palette)
 
     S.syntax = {
         comments = {
-            fg        = palette.base.grey.lightest,
+            fg        = palette.grey.lightest,
             bg        = nil,
             bold      = false,
             italic    = true,
@@ -97,7 +97,7 @@ function M.build(palette)
         },
 
         keywords = {
-            fg        = palette.base.purple.dark,
+            fg        = palette.purple.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -105,7 +105,7 @@ function M.build(palette)
         },
 
         functions = {
-            fg        = palette.base.yellow.dark,
+            fg        = palette.yellow.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -113,7 +113,7 @@ function M.build(palette)
         },
 
         types = {
-            fg        = palette.base.red.dark,
+            fg        = palette.red.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -121,7 +121,7 @@ function M.build(palette)
         },
 
         punctuation = {
-            fg        = palette.base.white,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -129,7 +129,7 @@ function M.build(palette)
         },
 
         operators = {
-            fg        = palette.base.white,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -137,7 +137,7 @@ function M.build(palette)
         },
 
         variables = {
-            fg        = palette.base.red.light,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -145,7 +145,7 @@ function M.build(palette)
         },
 
         constants = {
-            fg        = palette.base.purple.dark,
+            fg        = palette.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -155,7 +155,7 @@ function M.build(palette)
 
     S.diagnostics = {
         error = {
-            fg        = palette.base.red.light,
+            fg        = palette.red.light,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -163,7 +163,7 @@ function M.build(palette)
         },
 
         warning = {
-            fg        = palette.base.yellow.light,
+            fg        = palette.yellow.light,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -171,7 +171,7 @@ function M.build(palette)
         },
 
         info = {
-            fg        = palette.base.blue.dark,
+            fg        = palette.blue.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -179,7 +179,7 @@ function M.build(palette)
         },
 
         hint = {
-            fg        = palette.base.grey.lightest,
+            fg        = palette.grey.lightest,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -189,7 +189,7 @@ function M.build(palette)
 
     S.git = {
         added = {
-            fg        = palette.base.green.dark,
+            fg        = palette.green.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -197,7 +197,7 @@ function M.build(palette)
         },
 
         removed = {
-            fg        = palette.base.red.dark,
+            fg        = palette.red.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -205,7 +205,7 @@ function M.build(palette)
         },
 
         changed = {
-            fg        = palette.base.yellow.dark,
+            fg        = palette.yellow.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -213,7 +213,7 @@ function M.build(palette)
         },
 
         untracked = {
-            fg        = palette.base.grey.lightest,
+            fg        = palette.grey.lightest,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -223,7 +223,7 @@ function M.build(palette)
 
     S.file_explorer = {
         root = {
-            fg        = palette.base.red.dark,
+            fg        = palette.red.dark,
             bg        = nil,
             bold      = true,
             italic    = false,
@@ -231,7 +231,7 @@ function M.build(palette)
         },
 
         directory = {
-            fg        = palette.base.yellow.dark,
+            fg        = palette.yellow.dark,
             bg        = nil,
             bold      = false,
             italic    = false,
@@ -239,7 +239,7 @@ function M.build(palette)
         },
 
         file = {
-            fg        = palette.base.white,
+            fg        = palette.white,
             bg        = nil,
             bold      = false,
             italic    = false,

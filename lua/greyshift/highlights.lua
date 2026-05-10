@@ -5,14 +5,15 @@ function M.build(semantics, palette)
 
     H.ui = {
         Normal       = { smt = semantics.text.normal },
+        Special      = { smt = semantics.text.normal },
         CursorLine   = { smt = semantics.text.cursor },
-        Folded       = { smt = semantics.text.dimmed },
+        Folded       = { smt = semantics.text.normal, ovr = { fg = palette.grey.light } },
 
         NormalFloat  = { smt = semantics.ui.float },
         FloatBorder  = { smt = semantics.ui.border },
 
         LineNr       = { smt = semantics.ui.details },
-        CursorLineNr = { smt = semantics.ui.details, ovr = { fg = palette.base.yellow.dark, bold = true } },
+        CursorLineNr = { smt = semantics.ui.details, ovr = { fg = palette.yellow.dark, bold = true } },
         SignColumn   = { smt = semantics.ui.details },
         FoldColumn   = { smt = semantics.ui.details },
 
@@ -42,14 +43,14 @@ function M.build(semantics, palette)
         ["@type.builtin"]    = { smt = semantics.syntax.types },
 
         ["@variable"]        = { smt = semantics.syntax.variables },
-        ["@parameter"]       = { smt = semantics.syntax.variables },
+        ["@parameter"]       = { smt = semantics.syntax.variables, ovr = { fg = palette.red.light } },
         ["@property"]        = { smt = semantics.syntax.variables },
         ["@field"]           = { smt = semantics.syntax.variables },
 
         ["@constant"]        = { smt = semantics.syntax.constants },
         ["@constant.bultin"] = { smt = semantics.syntax.constants },
 
-        ["@string"]          = { smt = semantics.syntax.constants },
+        ["@string"]          = { smt = semantics.syntax.constants, ovr = { fg = palette.green.dark } },
         ["@number"]          = { smt = semantics.syntax.constants },
         ["@boolean"]         = { smt = semantics.syntax.constants },
 
@@ -89,8 +90,8 @@ function M.build(semantics, palette)
 
     H.plugins = {
         -- Neotree
-        NeoTreeNormal           = { smt = semantics.text.normal },
-        NeoTreeCursorLine       = { smt = semantics.text.cursor },
+        NeoTreeNormal           = { smt = semantics.text.normal, ovr = { bg = palette.grey.dark } },
+        NeoTreeCursorLine       = { smt = semantics.text.cursor, ovr = { bg = palette.grey.mediun } },
 
         NeoTreeRootName         = { smt = semantics.file_explorer.root },
 
