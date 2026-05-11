@@ -145,7 +145,7 @@ function M.build(palette)
         },
 
         constants = {
-            fg        = palette.dark,
+            fg        = palette.yellow.ligth,
             bg        = nil,
             bold      = false,
             italic    = false,
