@@ -13,6 +13,14 @@ function M.build(palette)
         },
 
         dimmed = {
+            fg        = palette.grey.lightest,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
+        folded = {
             fg        = nil,
             bg        = palette.grey.lightest,
             bold      = false,
