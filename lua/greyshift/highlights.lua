@@ -7,7 +7,7 @@ function M.build(semantics, palette)
         Normal       = { smt = semantics.text.normal },
         Special      = { smt = semantics.text.normal },
         CursorLine   = { smt = semantics.text.cursor },
-        Folded       = { smt = semantics.text.normal, ovr = { fg = palette.grey.lightest } },
+        Folded       = { smt = semantics.text.normal },
 
         NormalFloat  = { smt = semantics.ui.float },
         FloatBorder  = { smt = semantics.ui.border },
