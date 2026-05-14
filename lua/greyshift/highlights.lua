@@ -7,7 +7,6 @@ function M.build(semantics, palette)
         Normal       = { smt = semantics.text.normal },
         Special      = { smt = semantics.text.normal },
         CursorLine   = { smt = semantics.text.cursor },
-        Folded       = { smt = semantics.text.folded },
 
         NormalFloat  = { smt = semantics.ui.float },
         FloatBorder  = { smt = semantics.ui.border },
@@ -125,6 +124,11 @@ function M.build(semantics, palette)
         CmpItemKind             = { smt = semantics.syntax.types },
         CmpItemMenu             = { smt = semantics.text.dimmed },
         CmpItemSelected         = { smt = semantics.text.selection },
+
+        -- Ufo
+        UfoFoldedBg             = { smt = semantics.empty, ovr = { bg = palette.grey.light } },
+        UfoFoldedFg             = { smt = semantics.text.normal },
+        UfoFoldedEllipsis       = { smt = semantics.text.normal },
     }
 
     H.notify = {

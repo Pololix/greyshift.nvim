@@ -1,9 +1,7 @@
 local M = {}
 
 function M.build(palette)
-    local S = {}
-
-    S.text = {
+    M.text = {
         normal = {
             fg        = palette.white,
             bg        = palette.grey.medium,
@@ -52,7 +50,7 @@ function M.build(palette)
         },
     }
 
-    S.ui = {
+    M.ui = {
         float = {
             fg        = palette.white,
             bg        = palette.grey.dark,
@@ -94,7 +92,7 @@ function M.build(palette)
         },
     }
 
-    S.syntax = {
+    M.syntax = {
         comments = {
             fg        = palette.grey.lightest,
             bg        = nil,
@@ -160,7 +158,7 @@ function M.build(palette)
         },
     }
 
-    S.diagnostics = {
+    M.diagnostics = {
         error = {
             fg        = palette.red.light,
             bg        = nil,
@@ -194,7 +192,7 @@ function M.build(palette)
         },
     }
 
-    S.git = {
+    M.git = {
         added = {
             fg        = palette.green.dark,
             bg        = nil,
@@ -228,7 +226,7 @@ function M.build(palette)
         },
     }
 
-    S.file_explorer = {
+    M.file_explorer = {
         root = {
             fg        = palette.red.dark,
             bg        = nil,
@@ -254,7 +252,13 @@ function M.build(palette)
         },
     }
 
-    return S
+    M.empty = {
+            fg        = nil,
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+    }
 end
 
 return M
