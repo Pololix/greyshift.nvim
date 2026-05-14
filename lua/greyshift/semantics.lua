@@ -20,6 +20,13 @@ function M.build(palette)
             underline = false,
         },
 
+        folded = {
+            bg        = nil,
+            bold      = false,
+            italic    = false,
+            underline = false,
+        },
+
         cursor = {
             fg        = nil,
             bg        = palette.grey.light,
