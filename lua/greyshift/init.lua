@@ -9,9 +9,9 @@ function M.setup(opts)
 end
 
 function M.load()
-    local palette    = require("greyshift.palette")
-    local semantics  = require("greyshift.semantics").build(palette)
-    local highlights = require("greyshift.highlights").build(semantics, palette)
+    local palette    = require("greyshift.palette").get()
+    local semantics  = require("greyshift.semantics").get(palette)
+    local highlights = require("greyshift.highlights").get(palette, semantics)
 
     M.apply(highlights)
 end
